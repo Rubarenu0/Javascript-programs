@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Program</title>
+</head>
+<body>
+   <script>
+    //fizz buzz program
+    let i;
+    for(i=1;i<=100;i++){
+        if(i%3==0&&i%5==0)
+            document.write("FizzBuzz <br>");
+        else if(i%3==0)
+            document.write("Fizz <br>");
+        else if(i%5==0)
+            document.write("Buzz <br>");
+        else
+            document.write(i,"<br>");
+    }
+   
+//PALINDROME 
+
+
+    function Palindrome(string) {
+    const val= string.split('');
+    const reverse= val.reverse();
+    const reverseString = reverse.join('');
+
+    if(string == reverseString)
+        console.log('It is a palindrome');
+    else 
+        console.log('It is not a palindrome');
+}
+    string="malayalam";
+    Palindrome(string);
+
+//LARGEST NUMBER IN ARRAY
+
+   
+    function largest(arr){
+       console.log(Math.max(...arr))
+    }
+    let arr=[10,20,30,40]
+    largest(arr)
+
+
+//longest word in the string
+
+function getLongestWord(str){
+  let words = str.split(' ');
+  let maxLength = 0;
+  let longestWord = '';
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+      longestWord = words[i];
+    }
+  }
+  console.log(longestWord);
+}
+getLongestWord('Ruba Renuga');
+
+
+// Celsius to Fahrenheit
+
+
+function Fahrenheit(celsius){
+    fahrenheit = (celsius * 9/5) + 32;
+    return fahrenheit;
+}
+let celsius=13;
+console.log(Fahrenheit(celsius));
+
+
+//factorial of number
+
+function factorial(n){
+    for(num=n;num>=1;num--){
+        prod=prod*num;
+    }
+    return prod;
+}
+let n=5,prod=1;
+console.log(factorial(n))
+   
+    </script> 
+</body>
+</html>
